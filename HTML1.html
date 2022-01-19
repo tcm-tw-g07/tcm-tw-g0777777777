@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <title>Floresta Amazónica</title>
+    <link rel="stylesheet" type="text/css" href="CSS1.css">
+    <style>
+        @font-face {
+            font-family: Messiri;
+            src: url(ElMessiri-VariableFont_wght.ttf);
+            font-family: MonoRegular;
+            src: url(PTMono-Regular.ttf);
+            font-family: Monoton;
+            src: url(Monoton-Regular.ttf);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="navbar">
+            <a href="HTML1.html">Home</a>
+            <a href="HTML2.html">Localização</a>
+            <a href="HTML3.html">Animais</a>
+            <a href="HTML4.html">Galeria</a>
+            <a href="HTML5.html">Formulário</a>
+            <div class="datahora">
+                <div id="data-hora"></div>
+                <script>
+                    // Função para formatar 1 em 01
+                    const zeroFill = n => {
+                        return ('0' + n).slice(-2);
+                    }
+
+                    // Cria intervalo
+                    const interval = setInterval(() => {
+                        // Pega o horário atual
+                        const now = new Date();
+
+                        // Formata a data conforme dd/mm/aaaa hh:ii:ss
+                        const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+                        // Exibe na tela usando a div#data-hora
+                        document.getElementById('data-hora').innerHTML = dataHora;
+                    }, 1000);
+                    const options = {
+            timeZone: 'Lisboa/Portugal',
+            hour: 'numeric',
+            minute: 'numeric'
+        };
+        const date = new Intl.DateTimeFormat([], options);
+        console.log(date.format(new Date()));
+                </script>
+            </div>
+        </div>
+        </nav>
+        
+        <div class="Logo">
+            <img src="Logo.png" alt="">
+        </div>
+        <div class="Título">
+            <p>FLORESTA AMAZÓNICA</p>
+        </div>
+        <div class="Descrição">
+            <p>A Floresta Amazónica é uma floresta latifoliada húmida que cobre a maior parte da Bacia Amazónica da
+                América do Sul. <br />
+                Esta bacia abrange 7 milhões de quilómetros quadrados, dos quais 5 milhões e meio de quilómetros
+                quadrados são cobertos <br />
+                pela floresta tropical. É na Amazónia que está a maior floresta tropical húmida do planeta. É uma área
+                geográfica extremamente <br />
+                diversa, cortada pelo magnífico Rio Amazonas. Essa região faz parte de países como Bolívia, Brasil,
+                Colômbia, Equador, Peru, Venezuela, <br />
+                Guiana, Suriname e Guiana Francesa. </p>
+        </div>
+        <div class="Musica">
+        </div>
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5IzzogrKo6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+    </body>
+</html>

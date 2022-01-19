@@ -1,0 +1,157 @@
+* {box-sizing:border-box;
+}
+body {
+    padding: 0px 0 60px 0;
+}
+
+.caixa-slideshow {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.meus-slides {
+    display: none;
+}
+
+.anterior,
+.proximo {
+  cursor: pointer;
+  position: absolute;
+  background-color: rgba(0,0,0,0.3);
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.proximo {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.anterior:hover,
+.proximo:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.descricao-imagem {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.numero-imagem {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.ponto-indicador-slide {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.ativo, .ponto-indicador-slide:hover {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+} 
+
+#geral {
+  width: 80%;
+  margin:0 auto;
+  background: white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  max-height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("Floresta.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+  }
+.navbar {
+
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  padding-right: 3%;
+  font-family: 'Messiri'
+}
+
+.navbar a {
+  float: left;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #063500;
+}
+
+.Logo {
+  height: 87px;
+  width: 87px;
+  margin-left: 95%;
+  margin-top: 5px;
+}
+.Galeria {
+  color: white;
+  font-size: 70px;
+  padding-top: -100px;
+  text-align: center;
+  font-family: 'Messiri';
+}
+.datahora {
+  color: white;
+  font-size: 20px;
+  padding-top: 10px;
+  padding-left: 45%;
+}
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <link rel="stylesheet" href="CSS4.css">
+        <meta charset="UTF-8">
+		<title>Galeria</title>
+        <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+        <meta name="viewport" content="width=devvice-width, initial-scale=1.0">
+    </head>
+    <body>
+
+		<nav class="menu">
+			<div class="navbar">
+				<a href="HTML1.html">Home</a>
+				<a href="HTML2.html">Localização</a>
+				<a href="HTML3.html">Animais</a>
+				<a href="HTML4.html">Galeria</a>
+				<a href="HTML5.html">Formulário</a>
+				<div class="datahora">
+					<div id="data-hora"></div>
+					<script>
+						// Função para formatar 1 em 01
+						const zeroFill = n => {
+							return ('0' + n).slice(-2);
+						}
+	
+						// Cria intervalo
+						const interval = setInterval(() => {
+							// Pega o horário atual
+							const now = new Date();
+	
+							// Formata a data conforme dd/mm/aaaa hh:ii:ss
+							const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+	
+							// Exibe na tela usando a div#data-hora
+							document.getElementById('data-hora').innerHTML = dataHora;
+						}, 1000);
+						const options = {
+				timeZone: 'Lisboa/Portugal',
+				hour: 'numeric',
+				minute: 'numeric'
+			};
+			const date = new Intl.DateTimeFormat([], options);
+			console.log(date.format(new Date()));
+					</script>
+				</div>
+			</div>
+			</nav>
+	<div class="Logo">
+		<img src="Logo.png" alt="">
+	</div>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="Galeria">
+		<p>GALERIA</p>
+	</div>
+
+    <div class="caixa-slideshow">
+
+	  <div class="meus-slides fade">
+	    <img src="fotos/floresta1.jpg" alt="" style="width:100%">
+	  </div>
+
+	  <div class="meus-slides fade">
+		<img src="fotos/Animal1.jpg" alt="" style="width:100%">
+	  </div>
+
+	  <div class="meus-slides fade">
+		<img src="fotos/floresta2.jpg" alt="" style="width:100%">
+	  </div>
+
+      <div class="meus-slides fade">
+		<img src="fotos/Animal2.jpg" alt="" style="width:100%">
+	  </div>
+
+      <div class="meus-slides fade">
+		<img src="fotos/floresta3.jpg" alt="" style="width:100%">
+	  </div>
+
+      <div class="meus-slides fade">
+		<img src="fotos/Animal3.jpg" alt="" style="width:100%">
+	  </div>
+
+      <div class="meus-slides fade">
+		<img src="fotos/floresta4.jpg" alt="" style="width:100%">
+	  </div>
+	  <div class="meus-slides fade">
+		<img src="fotos/Animal4.jpg" alt="" style="width:100%">
+	  </div>
+	  <div class="meus-slides fade">
+		<img src="fotos/floresta5.jpg" alt="" style="width:100%">
+	  </div>
+	  <div class="meus-slides fade">
+		<img src="fotos/Animal5.jpg" alt="" style="width:100%">
+	  </div>
+
+	  <a class="anterior" onclick="controlador_slides(-1, 0)">&#10094;</a>
+	  <a class="proximo" onclick="controlador_slides(1, 0)">&#10095;</a>
+	</div>
+
+	<br>
+	<br>
+
+    </body>
+    <script src="JavaScriptFotos.js"></script>
+</html>

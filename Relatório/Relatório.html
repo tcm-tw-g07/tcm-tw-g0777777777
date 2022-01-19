@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Relatório.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="project-presentation---apresenta%C3%A7%C3%A3o-do-projeto"><strong>Project Presentation - Apresentação do projeto</strong></h1>
+<p>Foi proposto o desenvolvimento de uma página web para o trabalho final de
+Tecnologias Web, aplicando os conhecimentos adquiridos na unidade curricular, bem como, pesquisas e auto-aprendizagem.
+A temática escolhida pelo docente foi “Florestas” e dentro desse tema, decidimos
+escolher o sub-tema “Os animais mais perigosos da Amazónia” e toda a informação relevante à volta do mesmo.
+Pretendemos começar com uma introdução ao local (Floresta Amazónica) com
+imagens acompanhadas de texto que vão desaparecendo à medida que fazemos scroll.
+Durante o texto de apresentação do animal, este é acompanhado com um background do
+mesmo e assim sucessivamente. Há uma troca de background sempre que o animal muda.
+No final de cada texto estará presente uma hiperligação que direciona o utilizador para a Wikipédia do respetivo animal, para mais detalhes.
+Temos a ideia de fazer um slide com fotografias e videos do espaço e dos animais
+referidos acima.
+Pretendemos criar ainda um menu interativo com as categorias dos animais de acordo
+com as suas características (terrestre, aquático, répteis, etc), uma música de fundo e alguns detalhes como a data, hora e a localização da Floresta Amazónica no google maps. No final da página, pretendemos colocar as redes sociais e contactos.</p>
+<p>No entanto, nem tudo o que tinhamos em mente foi concretizado.
+Como tal, decidimos tornar o website de caráter informativo principalmente sobre a Floresta Amazónica e dentro do mesmo, fazer referência aos Animais Mais Perigosos da Amazónia numa das páginas criadas. Nos restantes aspectos, a maioria dos elementos pensados para a criação do website, foram feitos, tais como:</p>
+<ul>
+<li>Introdução ao local (Floresta Amazónica)</li>
+<li>Apresentação dos Animais mais Perigosos da Amazónia</li>
+<li>Ligação dos animais à Wikipédia</li>
+<li>Data e hora em constante atualização</li>
+<li>Localização da Floresta Amazónica (Google Maps)
+Acrescesntamos também um formulário na última página.</li>
+</ul>
+<h1 id="2-user-interface-%E2%80%93-interface-com-o-utilizador"><strong>2. User Interface – Interface com o utilizador</strong></h1>
+<h2 id="sitemap"><em>Sitemap</em>:</h2>
+<p><img src="sitemap.jpg" alt="SiteMap"></p>
+<h2 id="sketch"><em>Sketch</em> :</h2>
+<p><img src="Sketch.jpg" alt="Sketch"></p>
+<h1 id="3-product---produto"><strong>3. Product - Produto</strong></h1>
+<h2 id="descri%C3%A7%C3%A3o"><strong><em>-Descrição</em></strong>:</h2>
+<p>É um Website informativo e documental sobre a Floresta Amazónica e os Animais mais Perigosos que lá vivem.</p>
+<h2 id="regras-de-utiliza%C3%A7%C3%A3o"><strong><em>-Regras de Utilização</em></strong>:</h2>
+<p>Não é necessário qualquer tipo de registo do utilizador.</p>
+<h2 id="ajuda-%C3%A0-navega%C3%A7%C3%A3o"><strong><em>-Ajuda à Navegação</em></strong>:</h2>
+<p>O website é bastante simples e bastante intuitivo. Com o menu no canto superior esquerdo, torna-se mais fácil de navegar entre as 5 páginas.
+Na página inicial é nos apresentado o título do site e, por sua vez, o tema do mesmo juntamente com uma breve descrição da Floresta Amazónica. É também nos apresentado um vídeo ilucidativco acerca da temática em questão.
+Na página seguinte, é nos dada a localização exata da Floresta e dos países abragentes, através de uma tabela com as percentagens de ocupação da floresta em cada um deles. É também apresentado, mais à direita, um mapa proveniente do <em>Google Maps</em>, sendo este interativo.
+Na terceira página, destina-se aos animais pertencentes à floresta, classificados pela sua ameaça, através de uma lista, bem como, a descrição e imagem de cada um deles.
+Na quarta página, é nos presenteada uma galeria de fotografias da Floresta Amazónica nos seus diversos estados climatéricos, desde chuva, ao nascer do sol, passando pelos seus animais e paisagens.
+Por fim, na quinta e última página destina-se ao formulário, onde o utilizador poderá nos dar a sua opinião ou sugestão de melhoramento do website.</p>
+<h2 id="valida%C3%A7%C3%B5es"><strong>-<em>Validações</em></strong>:</h2>
+<p><img src="PrintValidação1.jpg" alt="V1">
+<img src="PrintValidação2.jpg" alt="V2">
+<img src="PrintValidação3.jpg" alt="V3">
+<img src="PrintValidação4.jpg" alt="V4">
+<img src="PrintValidação5.jpg" alt="V5">
+<img src="PrintValidaçãoCSS1.jpg" alt="V7">
+<img src="PrintValidaçãoCSS2.jpg" alt="V8">
+<img src="PrintValidaçãoCSS3.jpg" alt="V9">
+<img src="PrintValidaçãoCSS4.jpg" alt="V10">
+<img src="PrintValidaçãoCSS5.jpg" alt="V11"></p>
+<p>Todas as validações foram feitas na plataforma de validação W3C.</p>
+<h2 id="detalhes-de-implementa%C3%A7%C3%A3o"><strong>-<em>Detalhes de Implementação</em></strong>:</h2>
+<p>Foram realizados todos os objetivos pedidos pelo Docente. Eram requeridas 4 páginas estáticas mas nós implementamos 5 páginas.
+Implementamos também alguns elementos para tornar o site mais interativo, tais como:</p>
+<ul>
+<li>Data e Hora</li>
+<li>Slide de Fotografias</li>
+<li>Vídeo</li>
+<li>Mapa (<em>Google Maps</em>)</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Doacoes>
+<List>
+    <code>1</code>
+    <TipoDoacao>Base</TipoDoacao>
+    <Caracteristas>Plantacao de uma arvore na floresta</Caracteristas>
+    <Price>10 Euros</Price>
+</List>
+<List>
+    <code>2</code>
+    <TipoDoacao>Standard</TipoDoacao>
+    <Caracteristas>Plantacao de uma arvore na floresta e protecao de animais</Caracteristas>
+    <Price>20 Euros</Price>
+</List>
+<List>
+    <code>3</code>
+    <TipoDoacao>Pro</TipoDoacao>
+    <Caracteristas>Plantacao de uma arvore na floresta, protecao de animais e criacao de area protegida</Caracteristas>
+    <Price>50 Euros</Price>
+</List>
+</Doacoes>

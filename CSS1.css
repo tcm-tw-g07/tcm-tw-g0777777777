@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("Floresta.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    }
+.navbar {
+
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 3%;
+    font-family: 'MonoRegular';
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #063500;
+}
+
+.Título {
+    color:white;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 8%;
+    font-family: 'Monoton';
+}
+
+.Descrição {
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 1%;
+    font-family: 'MonoRegular';
+}
+
+.Musica {
+    text-align: center;
+    padding-top: 2%;
+    opacity: 50%;
+}
+.Logo {
+    height: 87px;
+    width: 87px;
+    margin-left: 95%;
+    margin-top: 5px;
+}
+.datahora {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 45%;
+}
+.video {
+    text-align: center;
+}

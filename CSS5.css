@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("Floresta.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    }
+.navbar {
+
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 3%;
+    font-family: 'MonoRegular';
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #0a5700;
+}
+
+.Título {
+    color:white;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 8%;
+    font-family: 'Monoton';
+}
+
+.Descrição {
+    color:white;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 1%;
+    font-family: 'MonoRegular';
+}
+
+.Musica {
+    text-align: center;
+    padding-top: 2%;
+    opacity: 50%;
+}
+.Imagem1 {
+    text-align: center;
+}
+.Logo {
+    height: 87px;
+    width: 87px;
+    margin-left: 95%;
+    margin-top: 5px;
+}
+.datahora {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 45%;
+}
+form {
+    font-family: Verdana,Tahoma,sans-serif;
+    font-size: 15px;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'Messiri';
+    padding-left: 11%;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-family: 'Messiri';
+}
+
+input, textarea {
+    width: 400px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: #000066;
+    background-color: #ffffff;
+    color: black;
+    font-weight: bold;
+}
+
+.enviar {
+    background-color: #17aa03;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: rgb(252, 246, 246);
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.Formulario {
+    margin-left: 37%;
+    padding-top: 10%;
+}
+.Doações {
+    color:rgb(255, 255, 255);
+    text-align: center;
+    font-size: 18px;
+    font-family: 'MonoRegular';
+}
+
+

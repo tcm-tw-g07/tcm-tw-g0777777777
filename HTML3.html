@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="utf-8" />
+        <title>Animais</title>
+        <link rel="stylesheet" type="text/css" href="CSS3.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <div class="navbar">
+                <a href="HTML1.html">Home</a>
+                <a href="HTML2.html">Localização</a>
+                <a href="HTML3.html">Animais</a>
+                <a href="HTML4.html">Galeria</a>
+                <a href="HTML5.html">Formulário</a>
+                <div class="datahora">
+                    <div id="data-hora"></div>
+                    <script>
+                        // Função para formatar 1 em 01
+                        const zeroFill = n => {
+                            return ('0' + n).slice(-2);
+                        }
+    
+                        // Cria intervalo
+                        const interval = setInterval(() => {
+                            // Pega o horário atual
+                            const now = new Date();
+    
+                            // Formata a data conforme dd/mm/aaaa hh:ii:ss
+                            const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+    
+                            // Exibe na tela usando a div#data-hora
+                            document.getElementById('data-hora').innerHTML = dataHora;
+                        }, 1000);
+                        const options = {
+                timeZone: 'Lisboa/Portugal',
+                hour: 'numeric',
+                minute: 'numeric'
+            };
+            const date = new Intl.DateTimeFormat([], options);
+            console.log(date.format(new Date()));
+                    </script>
+                </div>
+            </div>
+            </nav>
+    <div class="Logo"> 
+        <img src="Logo.png" alt="">
+    </div>
+    <div class="Animais">
+        <p>ANIMAIS</p>
+    </div>
+    <div class="TextoAnimais">
+        <p>Existem animais perigosos por todos os lados, mas no final das contas eles ainda fazem parte da biodiversidade que todos devemos respeitar.<br />
+            Em um dos muitos lugares mágicos do planeta, a Amazônia, existem vários animais perigosos e incríveis que devem ser respeitados por seus <br />
+            direitos vitais.</p>
+    </div>
+    <div class="TituloLista">
+        <p><strong>Os 5 animais Mais Perigosos da Amazónia</strong></p>
+    </div>
+    <div class="ListaAnimais">
+        <ul>
+            <li>Aranha-bananeira (Phoneutria nigriventer)
+            <li>Escorpiões Tityus
+            <li>Sucuri verde (Eunectes murinus)
+            <li>Jacaré-açu (Melanosuchus niger)
+            <li>Poraquê (Electrophorus electricus)
+        </ul>
+    </div>
+    <div class="Aranha-bananeira">
+        <h1>Aranha-bananeira (<i>Phoneutria nigriventer</i>)</h1>
+    </div>
+    <div class="Aranha">
+        <a href="https://pt.wikipedia.org/wiki/Phoneutria_nigriventer"><img src="animais/aranha.png" alt=""></a>
+    </div>
+    <div class="TextoAranha">
+        <p>Essa espécie de aranha pertence a família dos Ctenidae e é considerada, por muito especialistas, como uma das aranhas mais perigosas e letais do 
+            mundo. Embora seja verdade que essa espécie acasalada Phoneutria phera, que também habita as selvas da América do Sul, tenha um veneno mais tóxico, 
+            também é verdade que as aranhas-bananeiras protagonizam o maior número de picadas nos seres humanos. Isso se deve não apenas pelo caráter mais agressivo 
+            como também com os hábitos sinantrópicos. Costumam viver em plantações de banana e podem ser encontradas em portos e em plena cidade, pelo qual mantém 
+            um contato frequente com os seres humanos, especialmente com os trabalhadores agrários.</p>
+    </div>
+    <div class="Aranha-bananeira">
+        <h1>Escorpiões Tityus <i>(Tityus Stigmurus)</i></h1>
+    </div>
+    <div class="Escorpiao">
+        <a href="https://pt.wikipedia.org/wiki/Escorpi%C3%A3o-amarelo"><img src="animais/escorpiao.jpg" alt=""></a>
+    </div>
+    <div class="TextoEscorpiao">
+        <p>Na América do Sul existem mais de 100 espécies de escorpião pertencentes ao gênero Tityus. Apesar de apenas 6 dessas espécies serem venenosos, suas 
+            picadas matam cerca de 30 vidas humanas todos os anos apenas no norte do Brasil, por isso, formam parte da lista de animais perigosos da Amazônia e 
+            venenosos também. Esses frequentes ataques se justificam pela grande adaptação dos escorpiões nas zonas urbanas, fazendo que o contato com as pessoas 
+            seja praticamente diário. Os escorpiões Tityus venenosos têm um poderosos veneno na glândula bulbosa, que podem inocular por meio de um ferrão curvado
+             que possuem na cauda. Uma vez injetado no corpo do outro indivíduo, as substâncias neurotóxicas do veneno causam paralisia quase instantaneamente e 
+             podem levar a um ataque cardíaco ou respiratório. Trata-se de um mecanismo de defesa mas também de uma poderosa ferramenta de caça.</p>
+    </div>
+    <div class="Aranha-bananeira">
+        <h1>Sucuri Verde (<i>Eunectes murinus</i>)</h1>
+    </div>
+    <div class="Sucuri">
+        <a href="https://pt.wikipedia.org/wiki/Sucuri-verde"><img src="animais/sucuri.png" alt=""></a>
+    </div>
+    <div class="TextoSucuri">
+        <p>A famosa sucuri verde é uma cobra constritora endêmica dos rios amazônicos, compondo a família das boas. Essa é uma espécie de cobra conhecida como uma das 
+            mais pesadas, uma vez que um exemplar desse tipo de cobra pode chegar a pesar 220 kg, existem controversas sobre se ela é ou não a maior delas. Isso porque, 
+            a píton-reticulada (Python reticulatus) costuma ter alguns centímetros a mais do que a sucuri verde, apesar do peso corporal ser muito menor.
+            Apesar da má fama conquistada em grande parte dos filmes que levaram seu nome, as sucuris verdes dificilmente atacam os seres humanos, já que as pessoas 
+            não formam parte da cadeia trófica. Quer dizer, as sucuris verde não atacam os seres humanos para se alimentar. Os raros ataques da sucuri verde a pessoas 
+            são defensivos, quando o animal se sente ameaçado de alguma maneira. Na realidade, as cobras geralmente têm uma personalidade mais tranquila do que agressiva. 
+            Se elas puderem escapar ou se esconder para economizar energia e evitar um confronto, certamente farão.</p>
+    </div>
+    <div class="Aranha-bananeira">
+        <h1>Jacare-açú (<i>Melanosuchus niger</i>)</h1>
+    </div>
+    <div class="Jacare">
+        <a href="https://pt.wikipedia.org/wiki/Jacar%C3%A9-a%C3%A7u"><img src="animais/jacare.jpeg" alt=""></a>
+    </div>
+    <div class="TextoJacare">
+        <p>Mais um na lista dos animais perigosos da Amazônia está o jacaré-açu. É uma espécie do gênero Melanosuchus que sobreviveu. O corpo pode chegar a medir até 6 
+            metros de largura e tem uma coloração preta quase sempre uniforme, estando entre os maiores crocodilos do mundo. Além de ser um excelente nadador, o jacaré-açu 
+            também é um caçador implacável e muito inteligente, com mandíbulas muito poderosas. A alimentação inclui desde pequenos mamíferos, aves e peixes até animais 
+            de porte grande, como veados, macacos, capivaras e javali</p>
+    </div>
+    <div class="Aranha-bananeira">
+        <h1>Poraquê (<i>Electrophorus electricus</i>)</h1>
+    </div>
+    <div class="Poraque">
+        <a href="https://pt.wikipedia.org/wiki/Poraqu%C3%AA"><img src="animais/poraque.jpg" alt=""></a>
+    </div>
+    <div class="TextoPoraque">
+        <p>As enguias elétricas têm muitos nomes na cultura popular. Muita gente confunde com as cobras aquáticas, mas as enguias são uma espécie de peixe que pertence à 
+            família Gymnotidae. Na realidade, trata-se de uma espécie única do seu gênero, com características mais particulares. Sem dúvida, a característica mais reconhecida, 
+            e também mais temida, dessas enguias é a capacidade de transmitir correntes elétricas desde o interior do corpo para exterior. Isso é possível porque o organismo 
+            dessas enguias possuem um conjunto de células muito especiais que permitem emitir poderosas descargas elétricas de até 600 W (uma voltagem superior a qualquer 
+            tomada que você tenha na sua casa) e, por esse motivo, se considera um dos animais perigosos da Amazônia. As enguias utilizam essa particular habilidade para se 
+            defender, para caçar as presas e também para se comunicarem com outras enguias.</p>
+    </div>
+    </body>
+</html>

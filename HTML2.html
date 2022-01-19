@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Localização</title>
+    <link rel="stylesheet" type="text/css" href="CSS2.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="navbar">
+            <a href="HTML1.html">Home</a>
+            <a href="HTML2.html">Localização</a>
+            <a href="HTML3.html">Animais</a>
+            <a href="HTML4.html">Galeria</a>
+            <a href="HTML5.html">Formulário</a>
+            <div class="datahora">
+                <div id="data-hora"></div>
+                <script>
+                    // Função para formatar 1 em 01
+                    const zeroFill = n => {
+                        return ('0' + n).slice(-2);
+                    }
+
+                    // Cria intervalo
+                    const interval = setInterval(() => {
+                        // Pega o horário atual
+                        const now = new Date();
+
+                        // Formata a data conforme dd/mm/aaaa hh:ii:ss
+                        const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+                        // Exibe na tela usando a div#data-hora
+                        document.getElementById('data-hora').innerHTML = dataHora;
+                    }, 1000);
+                    const options = {
+            timeZone: 'Lisboa/Portugal',
+            hour: 'numeric',
+            minute: 'numeric'
+        };
+        const date = new Intl.DateTimeFormat([], options);
+        console.log(date.format(new Date()));
+                </script>
+            </div>
+        </div>
+        </nav>
+        <div class="Logo">
+            <img src="Logo.png" alt="">
+        </div>
+        <div class="Localização">
+            <p>LOCALIZAÇÃO</p>
+        </div>
+        <div class="DescriçãoLocalização">
+            <p>A Floresta Amazónica localiza-se no norte da América do Sul, abrange os estados do Amazonas, Acre, Amapá,
+                Rondônia, Pará e Roraima, <br />
+                além de menores proporções nos países: Peru, Colômbia, Venezuela, Equador, Bolívia, Guiana, Suriname e
+                Guiana Francesa.</p>
+        </div>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3428686.813035253!2d-64.27268738473774!3d-3.620769264986645!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91e8605342744385%3A0x3d3c6dc1394a7fc7!2zQW1hesO0bmlh!5e0!3m2!1spt-PT!2spt!4v1642526087036!5m2!1spt-PT!2spt"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="LocalizaçãoTexto">
+        </div>
+        <div class="TítuloTabela">
+            <p><strong>Países Inseridos na Amazónia</strong></p>
+        </div>
+        <div class="TextoComplementar">
+            <p>A Amazônia representa mais da metade das florestas tropicais remanescentes no planeta e compreende a
+                maior <br />
+                biodiversidade em uma floresta tropical no mundo. </p>
+        </div>
+        <div class="tabela">
+            <table style="width:100%">
+                <tr>
+                    <th>Países</th>
+                    <th>Área do país ocupada (%)</th>
+                </tr>
+                <tr>
+                    <td>Brasil</td>
+                    <td>60,3%</td>
+                </tr>
+                <tr>
+                    <td>Bolívia</td>
+                    <td>6,87%</td>
+                </tr>
+                <tr>
+                    <td>Colômbia</td>
+                    <td>6,95%</td>
+                </tr>
+                <tr>
+                    <td>Equador</td>
+                    <td>1,48%</td>
+                </tr>
+                <tr>
+                    <td>Guiana</td>
+                    <td>3,02%</td>
+                </tr>
+                <tr>
+                    <td>Guiana Francesa</td>
+                    <td>1,15%</td>
+                </tr>
+                <tr>
+                    <td>Perú</td>
+                    <td>11,3%</td>
+                </tr>
+                <tr>
+                    <td>Suriname</td>
+                    <td>2,1%</td>
+                </tr>
+                <tr>
+                    <td>Venezuela</td>
+                    <td>6,73%</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

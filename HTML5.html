@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <title>Floresta Amazónica</title>
+    <link rel="stylesheet" type="text/css" href="CSS5.css">
+    <style>
+        @font-face {
+            font-family: Messiri;
+            src: url(ElMessiri-VariableFont_wght.ttf);
+            font-family: MonoRegular;
+            src: url(PTMono-Regular.ttf);
+            font-family: Monoton;
+            src: url(Monoton-Regular.ttf);
+        }
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <div class="navbar">
+            <a href="HTML1.html">Home</a>
+            <a href="HTML2.html">Localização</a>
+            <a href="HTML3.html">Animais</a>
+            <a href="HTML4.html">Galeria</a>
+            <a href="HTML5.html">Formulário</a>
+            <div class="datahora">
+                <div id="data-hora"></div>
+                <script>
+                    // Função para formatar 1 em 01
+                    const zeroFill = n => {
+                        return ('0' + n).slice(-2);
+                    }
+
+                    // Cria intervalo
+                    const interval = setInterval(() => {
+                        // Pega o horário atual
+                        const now = new Date();
+
+                        // Formata a data conforme dd/mm/aaaa hh:ii:ss
+                        const dataHora = zeroFill(now.getUTCDate()) + '/' + zeroFill((now.getMonth() + 1)) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+
+                        // Exibe na tela usando a div#data-hora
+                        document.getElementById('data-hora').innerHTML = dataHora;
+                    }, 1000);
+                    const options = {
+            timeZone: 'Lisboa/Portugal',
+            hour: 'numeric',
+            minute: 'numeric'
+        };
+        const date = new Intl.DateTimeFormat([], options);
+        console.log(date.format(new Date()));
+                </script>
+            </div>
+        </div>
+        </nav>
+        <div class="Logo">
+            <img src="Logo.png" alt="">
+        </div>
+        <div class="Formulario">
+            <form name="meu_form">
+
+                <h1>FORMULÁRIO</h1>
+              
+                <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+                <label for="nomeid"></label>
+              
+                <input type="tel" id="foneid" placeholder="Telefone" name="Telefone" />
+                <label for="foneid"></label>
+              
+                <input type="email" id="emailid" placeholder="Email" name="mail" />
+                <label for="emailid"></label>
+              
+                <textarea placeholder="Deixe a sua opnião"></textarea>
+              
+                <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+              </form>
+        </div>
+        <div class="Doações">
+        <a href="XMLDoacoes.xml">Doações para a Amazónia</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    max-height: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body {
+    background-image: url("Floresta.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    }
+.navbar {
+
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    padding-right: 3%;
+    font-family: 'MonoRegular';
+}
+
+.navbar a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #063500;
+
+}
+.Logo {
+    height: 87px;
+    width: 87px;
+    margin-left: 95%;
+    margin-top: 5px;
+}
+.TituloLista {
+    color:white;
+    text-align: left;
+    font-size: 25px;
+    padding-top: 6%;
+    padding-left: 3%;
+    font-family: 'Messiri';
+}
+.Animais {
+    color:white;
+    text-align: center;
+    font-size: 70px;
+    padding-top: 2%;
+    font-family: 'Messiri';
+}
+.TextoAnimais {
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.ListaAnimais {
+    color:white;
+    padding-left: 3%;
+    padding-top: 2%;
+    font-size: 20px;
+    font-family: 'Messiri';   
+}
+.Aranha-bananeira{
+    color:white;
+    font-size: 20px;
+    padding-top: 5%;
+    padding-left: 3%;
+    font-family: 'Messiri';   
+}
+.Aranha {
+    height: 500px;
+    width: 500px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.TextoAranha {
+    color:white;
+    text-align: justify;
+    margin-right: 20%;
+    position: absolute;
+    left: 30%;
+    top: 78%;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.Escorpiao {
+    height: 500px;
+    width: 500px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.TextoEscorpiao {
+    color:white;
+    text-align: justify;
+    margin-right: 20%;
+    position: absolute;
+    left: 30%;
+    top: 149%;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.Sucuri {
+    height: 500px;
+    width: 500px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.TextoSucuri {
+    color:white;
+    text-align: justify;
+    margin-right: 20%;
+    position: absolute;
+    left: 30%;
+    top: 220%;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.Jacare {
+    height: 500px;
+    width: 500px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.TextoJacare {
+    color:white;
+    text-align: justify;
+    margin-right: 20%;
+    position: absolute;
+    left: 30%;
+    top: 290%;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.Poraque {
+    height: 500px;
+    width: 500px;
+    margin-left: 3%;
+    margin-top: 1%;
+}
+.TextoPoraque {
+    color:white;
+    text-align: justify;
+    margin-right: 20%;
+    position: absolute;
+    left: 30%;
+    top: 360%;
+    font-size: 20px;
+    padding-top: 2%;
+    font-family: 'Messiri';   
+}
+.datahora {
+    color: white;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-left: 45%;
+}
